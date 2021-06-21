@@ -23,6 +23,7 @@ const MoviePage = ({ match }) => {
     )
       .then((res) => res.json())
       .then((data) => setSimilars(data.results));
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return (
