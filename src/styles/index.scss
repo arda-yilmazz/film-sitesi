@@ -32,3 +32,12 @@ body {
 #root {
   height: 100%;
 }
+
+::-webkit-scrollbar {
+  width: 7px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(#fff, .2); 
+  border-radius: 10px;
+}

@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { Route } from "react-router";
-import MovieInfo from './MovieInfo'
+import MovieInfo from "./MovieInfo";
 import SimilarMovies from "./SimilarMovies";
 
 const MoviePage = ({ match }) => {
@@ -13,10 +13,7 @@ const MoviePage = ({ match }) => {
       `https://api.themoviedb.org/3/movie/${match.params.id}?api_key=235b77fe4aedf709eb99a3ac9f078f57&language=en-US`
     )
       .then((res) => res.json())
-      .then((data) => {
-        setMovie(data);
-        console.log(data);
-      });
+      .then((data) => setMovie(data));
 
     //Get Similar Movies
     fetch(
@@ -24,13 +21,13 @@ const MoviePage = ({ match }) => {
     )
       .then((res) => res.json())
       .then((data) => setSimilars(data.results));
-  // eslint-disable-next-line react-hooks/exhaustive-deps
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return (
     <>
       <div className="movie-page">
-        <h1 style={{margin: '20px'}}>{movie.title}</h1>
+        <h1 style={{ margin: "20px" }}>{movie.title}</h1>
 
         <MovieInfo movie={movie} />
 
