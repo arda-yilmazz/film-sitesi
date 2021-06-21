@@ -1,0 +1,40 @@
+.movie-list {
+    text-align: center;
+
+    h1 {
+        font-family: 'Montserrat', sans-serif;
+        margin: 20px;
+    }
+    
+    .movies {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        width: 1200px;
+        margin: 0 auto;
+
+        .movie {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            margin: 10px;
+            position: relative;
+
+            img {
+                width: 240px;
+                height: 360px;
+            }
+
+            .title {
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                background: linear-gradient(to top, #000, transparent);
+                height: 30px;
+            }
+        }
+    }
+}
