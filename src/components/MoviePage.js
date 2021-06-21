@@ -30,7 +30,7 @@ const MoviePage = ({ match }) => {
   return (
     <>
       <div className="movie-page">
-        <h1>{movie.title}</h1>
+        <h1 style={{margin: '20px'}}>{movie.title}</h1>
 
         <MovieInfo movie={movie} />
 

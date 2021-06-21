@@ -3,7 +3,7 @@ import "../styles/moviepage.scss";
 const SimilarMovies = ({ similars }) => {
   return (
     <>
-      <h1>Bu filme benzeyen filmlere bakmak ister misin?</h1>
+    <h1 style={{margin: '20px'}}>Bu filme benzeyen filmlere bakmak ister misin?</h1>
       <div className="similar-movies">
         {similars.map((movie) => (
           <a

@@ -4,6 +4,7 @@ const MovieInfo = ({movie}) => {
   return (
     <>
       <div className="movie-info">
+        <span className="release-date">Yayınlanma tarihi: {movie.release_date}</span>
         <div className="movie-image">
           <img
             src={`https://www.themoviedb.org/t/p/w600_and_h900_bestv2${movie.backdrop_path}`}

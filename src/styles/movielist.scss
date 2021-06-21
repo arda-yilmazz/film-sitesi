@@ -1,5 +1,5 @@
 .movie-list {
-    text-align: center;
+    height: 100%;
 
     h1 {
         font-family: 'Montserrat', sans-serif;
@@ -35,6 +35,16 @@
                 background: linear-gradient(to top, #000, transparent);
                 height: 30px;
             }
+        }
+    }
+}
+
+@media (max-width: 700px) {
+    .movie-list {
+
+        .movies {
+            width: 300px;
+            flex-direction: column;
         }
     }
 }

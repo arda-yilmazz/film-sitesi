@@ -1,14 +1,11 @@
-import { useState } from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import About from "./components/About";
 import MovieList from "./components/MovieList";
 import MoviePage from "./components/MoviePage";
 import Nav from "./components/Nav";
-import LoadingAnim from "./components/LoadingAnim";
 import NotFound from "./components/404";
 
 function App() {
-  const [loading, setLoading] = useState(false);
   return (
     <>
       <Router>
@@ -19,15 +16,11 @@ function App() {
           <Route
             exact
             path="/filmler"
-            component={() => (
-              <MovieList loading={loading} setLoading={setLoading} />
-            )}
+            component={MovieList}
           />
           <Route path="/filmler/film/:id" component={MoviePage} />
           <Route component={NotFound} />
         </Switch>
-
-        {loading && <LoadingAnim />}
       </Router>
     </>
   );
