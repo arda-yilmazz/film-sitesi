@@ -15,29 +15,37 @@
 
   .release-date {
     font-size: 14px;
-    margin-bottom: 10px;
+    margin: 10px;
     padding: 10px;
     border-radius: 5px;
     background: rgba(#fff, 0.1);
   }
 
-  .movie-image {
-    width: 250px;
-    height: 400px;
+  .movie-detail {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(#000, 0.1);
+    padding: 20px;
 
-    img {
-      height: 100%;
-      border-radius: 5px;
+    .movie-image {
+      width: 250px;
+      height: 400px;
+
+      img {
+        height: 100%;
+        border-radius: 5px;
+      }
     }
-  }
-  .info {
-    width: 350px;
-    margin-left: 150px;
-    .description {
-      p {
-        font-size: 18px;
-        background: rgba(#fff, 0.1);
-        line-height: 36px;
+    .info {
+      width: 350px;
+      margin-left: 150px;
+      .description {
+        p {
+          font-size: 18px;
+          background: rgba(#fff, 0.1);
+          line-height: 36px;
+        }
       }
     }
   }
@@ -101,33 +109,38 @@
       width: 100%;
     }
 
-    .movie-image {
-      width: 250px;
-      height: 250px;
+    .movie-detail {
+      flex-direction: column;
+      .movie-image {
+        width: 250px;
+        height: 250px;
 
-      img {
-        width: 100%;
+        img {
+          width: 100%;
+        }
       }
-    }
 
-    .info {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin: 25px 0 0 0;
-
-      .description {
+      .info {
         display: flex;
         align-items: center;
         justify-content: center;
+        margin: 25px 0 0 0;
 
-        p {
-          width: 350px;
-          font-size: 16px;
+        .description {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+
+          p {
+            width: 350px;
+            font-size: 16px;
+            background: rgba(#fff, 0.1)
+          }
         }
       }
     }
   }
+
   .similar-movies {
     width: 420px;
     padding: 0;
@@ -137,7 +150,7 @@
       font-size: 14px;
       margin: 20px;
     }
-    
+
     .similar-movie {
       flex-direction: column;
       border-radius: 0;
