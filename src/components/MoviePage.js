@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { Route } from "react-router";
 import MovieInfo from './MovieInfo'
 import SimilarMovies from "./SimilarMovies";
 
@@ -32,6 +33,8 @@ const MoviePage = ({ match }) => {
         <h1>{movie.title}</h1>
 
         <MovieInfo movie={movie} />
+
+        <Route path="/filmler/film:id" component={MoviePage} />
 
         <SimilarMovies similars={similars} />
       </div>
