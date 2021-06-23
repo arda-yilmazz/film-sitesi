@@ -15,6 +15,7 @@
         height: 60px;
         padding: 0 20px;
         border-bottom: 1px solid rgba(#fff, 0.1);
+        position: relative;
 
         &:hover {
           background: rgba(#fff, 0.1);
@@ -23,6 +24,7 @@
             content: '';
             display: block;
             position: absolute;
+            height: 1px;
             bottom: 0;            
             left: 0;
             right: 0;

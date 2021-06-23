@@ -1,12 +1,14 @@
 import '../styles/home.scss'
 import PlayingMovies from './NowPlayingMovies'
 import UpcomingMovies from './UpcomingMovies'
+import Latest from './Latest'   
 
 const Home = () => {
 
+
     return (
         <>
-            <h1>HOME PAGE</h1>
+            <Latest />
 
             <PlayingMovies />
 
