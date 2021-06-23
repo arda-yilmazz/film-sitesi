@@ -1,0 +1,113 @@
+.playing-movies-container {
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  flex-direction: column;
+  width: 95.5%;
+  margin: 0 auto;
+
+  h3 {
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    width: 100%;
+    margin-left: 60px;
+    font-size: 23px;
+  }
+
+  .movies {
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    width: 97.3%;
+    margin: 20px;
+    padding: 20px;
+    overflow: auto;
+    border: 1px solid rgba(#fff, 0.1);
+    border-radius: 10px;
+    background: #333;
+
+    .movie {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      margin: 0 5px;
+      position: relative;
+      background: #333;
+
+      img {
+        width: 100px;
+        border-radius: 5px;
+      }
+
+      .title {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background: transparent;
+        font-size: 10px;
+      }
+    }
+  }
+}
+
+.upcoming-movies-container {
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  flex-direction: column;
+  width: 95.5%;
+  margin: 0 auto;
+
+  h3 {
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    width: 100%;
+    margin-left: 60px;
+    font-size: 23px;
+  }
+
+  .movies {
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    width: 97.3%;
+    margin: 20px;
+    padding: 20px;
+    overflow: auto;
+    border: 1px solid rgba(#fff, 0.1);
+    border-radius: 10px;
+    background: #333;
+
+    .movie-container {
+      background: #333;
+
+      .movie {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        margin: 0 5px;
+        position: relative;
+        background: #333;
+
+        img {
+          width: 100px;
+          border-radius: 5px;
+        }
+
+        .title {
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          right: 0;
+          background: transparent;
+          font-size: 10px;
+        }
+      }
+    }
+  }
+}

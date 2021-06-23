@@ -1,14 +1,14 @@
 import "../styles/movielist.scss";
 import { useState, useEffect } from "react";
 import Movie from "./Movie";
-import LoadingAnim from './LoadingAnim';
+import LoadingAnim from "./LoadingAnim";
 
 const MovieList = () => {
   const [movies, setMovies] = useState([]);
   const [loading, setLoading] = useState(false);
 
   useEffect(() => {
-    setLoading(true)
+    setLoading(true);
     fetch(
       `https://api.themoviedb.org/3/movie/top_rated?api_key=235b77fe4aedf709eb99a3ac9f078f57&language=en-US&page=1`
     )
@@ -18,7 +18,8 @@ const MovieList = () => {
         console.log(data);
         setLoading(false);
       });
-  // eslint-disable-next-line react-hooks/exhaustive-deps
+
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return (

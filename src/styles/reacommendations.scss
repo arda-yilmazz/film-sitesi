@@ -1,0 +1,38 @@
+.reacommendations-movies {
+    height: 100px;
+
+    ul {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        width: 300px;
+        height: 1150px;
+        border-left: 1px solid rgba(#fff, .2);
+        border-bottom: 1px solid rgba(#fff, .2);
+        background-color: rgba(#000, .1);
+        overflow: auto;
+
+        h3 {
+            padding: 10px;
+            font-size: 14px;
+        }
+
+        li {
+            width: 100%;
+
+            a {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 50px;
+                margin: 0 auto;
+        
+
+                &:hover {
+                    background: rgba(#fff, .2)
+                }
+            }
+        }
+    }
+}
