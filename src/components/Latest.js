@@ -1,4 +1,6 @@
+import "../styles/latest.scss";
 import { useState, useEffect } from "react";
+import {Link} from 'react-router-dom'
 
 const Latest = () => {
   const [latest, setLatest] = useState({});
@@ -9,18 +11,25 @@ const Latest = () => {
     )
       .then((res) => res.json())
       .then((data) => {
-        setLatest(data)
-        console.log(data)
+        setLatest(data);
+        console.log(data);
       });
   }, []);
 
   return (
     <>
-        <h1>{latest.original_name}</h1>
-
-        <div className="summary">
-            {latest.overview}
+      <div className="latest-movie">
+        <div className="left">
+          <Link to={`/filmler/film/${latest.id}`}>{latest.name}</Link>
+          <div className="image">
+            <img
+              src={`https://www.themoviedb.org/t/p/w600_and_h900_bestv2${latest.poster_path}`}
+              alt={latest.name}
+            />
+          </div>
         </div>
+      </div>
+      <div className="right"></div>
     </>
   );
 };

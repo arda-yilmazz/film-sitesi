@@ -47,8 +47,6 @@ const MoviePage = ({ match }) => {
 
           <Recommendations
             recommendations={recommendations}
-            active={active}
-            setActive={setActive}
           />
         </div>
       </div>

@@ -1,21 +1,19 @@
-import '../styles/home.scss'
-import PlayingMovies from './NowPlayingMovies'
-import UpcomingMovies from './UpcomingMovies'
-import Latest from './Latest'   
+import "../styles/home.scss";
+import PlayingMovies from "./NowPlayingMovies";
+import UpcomingMovies from "./UpcomingMovies";
+import Latest from "./Latest";
+
 
 const Home = () => {
+  return (
+    <>
+      <Latest />
 
+      <PlayingMovies />
 
-    return (
-        <>
-            <Latest />
+      <UpcomingMovies />
+    </>
+  );
+};
 
-            <PlayingMovies />
-
-            <UpcomingMovies />
-
-        </>
-    )
-}
-
-export default Home
+export default Home;

@@ -10,8 +10,8 @@ const MovieList = () => {
   useEffect(() => {
     setLoading(true);
     fetch(
-      `https://api.themoviedb.org/3/movie/top_rated?api_key=235b77fe4aedf709eb99a3ac9f078f57&language=en-US&page=1`
-    )
+      `https://api.themoviedb.org/3/movie/top_rated?api_key=235b77fe4aedf709eb99a3ac9f078f57&language=${movies.overview > 0 ? "en-US" : "tr-TR"}&page=1`
+      )
       .then((res) => res.json())
       .then((data) => {
         setMovies(data.results);

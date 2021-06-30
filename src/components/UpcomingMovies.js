@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react'
 import Movie from './Movie'
+import {Swiper, SwiperSlide} from 'swiper/react'
 
 const UpcomingMovies = () => {
     const [movies, setMovies] = useState([])
@@ -14,13 +15,13 @@ const UpcomingMovies = () => {
         <>
             <div className="upcoming-movies-container">
                 <h3>Yakında Yayınlanması Beklenen Filmler</h3>
-                <div className="movies">
+                <Swiper className="movies" slidesPerView={10}>
                     {movies.map(movie => (
-                        <div key={movie.id} className="movie-container">
+                        <SwiperSlide key={movie.id} className="movie-container">
                             <Movie movie={movie} />
-                        </div>
+                        </SwiperSlide>
                     ))}
-                </div>
+                </Swiper>
             </div>
         </>
     )

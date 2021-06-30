@@ -4,7 +4,7 @@ import MovieList from "./components/MovieList";
 import MoviePage from "./components/MoviePage";
 import Nav from "./components/Nav";
 import NotFound from "./components/404";
-import Home from './components/Home';
+import Home from "./components/Home";
 
 function App() {
   return (
@@ -14,11 +14,7 @@ function App() {
         <Switch>
           <Route exact path="/" component={Home} />
           <Route path="/hakkinda" component={About} />
-          <Route
-            exact
-            path="/filmler"
-            component={MovieList}
-          />
+          <Route exact path="/filmler" component={MovieList} />
           <Route path="/filmler/film/:id" component={MoviePage} />
           <Route component={NotFound} />
         </Switch>

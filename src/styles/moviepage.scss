@@ -50,11 +50,14 @@ div {
           width: 350px;
           margin-left: 150px;
           .description {
-            p {
-              font-size: 18px;
-              background: rgba(#fff, 0.1);
-              line-height: 36px;
-            }
+            font-size: 18px;
+            line-height: 36px;
+            background-color: rgba(#fff, 0.1);
+          }
+
+          .not-found-overview {
+            font-size: 20px;
+            padding: 20px;
           }
         }
       }
