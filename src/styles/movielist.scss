@@ -37,6 +37,27 @@
             }
         }
     }
+    .pagination-button {
+        padding: 20px;
+        border: 1px solid rgba(#fff, .2);
+        border-radius: 10px;
+        margin-left: 20px;
+        cursor: pointer;
+        margin-bottom: 20px;
+
+        &[disabled] {
+            opacity: .2;
+            pointer-events: none;
+
+            &:hover {
+                background-color: transparent;
+            }
+        }
+
+        &:hover {
+            background: rgba(#fff, .2);
+        }
+    }
 }
 
 @media (max-width: 700px) {

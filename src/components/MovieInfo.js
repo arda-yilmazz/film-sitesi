@@ -11,8 +11,8 @@ const MovieInfo = ({ movie }) => {
           <div className="movie-image">
             <img
               src={
-                `https://www.themoviedb.org/t/p/w600_and_h900_bestv2${movie.backdrop_path}` ||
-                `https://www.themoviedb.org/t/p/w600_and_h900_bestv2${movie.poster_path}`
+                `https://www.themoviedb.org/t/p/original${movie.backdrop_path}` ||
+                `https://www.themoviedb.org/t/p/original${movie.poster_path}`
               }
               alt={movie.title}
             />
