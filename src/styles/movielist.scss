@@ -1,71 +1,70 @@
 .movie-list {
-    height: 100%;
+  height: 100%;
 
-    h1 {
-        font-family: 'Montserrat', sans-serif;
-        margin: 20px;
+  h1 {
+    font-family: "Montserrat", sans-serif;
+    margin: 20px;
+  }
+
+  .movies {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 1200px;
+    margin: 0 auto;
+
+    .movie {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      margin: 10px;
+      position: relative;
+
+      img {
+        width: 240px;
+        height: 360px;
+      }
+
+      .title {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background: linear-gradient(to top, #000, transparent);
+        height: 30px;
+      }
     }
-    
-    .movies {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        flex-wrap: wrap;
-        width: 1200px;
-        margin: 0 auto;
+  }
+  .pagination-button {
+    padding: 20px;
+    border: 1px solid rgba(#fff, 0.2);
+    border-radius: 10px;
+    margin-left: 20px;
+    cursor: pointer;
+    margin-bottom: 20px;
 
-        .movie {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            flex-direction: column;
-            margin: 10px;
-            position: relative;
+    &[disabled] {
+      opacity: 0.2;
+      pointer-events: none;
 
-            img {
-                width: 240px;
-                height: 360px;
-            }
-
-            .title {
-                position: absolute;
-                bottom: 0;
-                left: 0;
-                right: 0;
-                background: linear-gradient(to top, #000, transparent);
-                height: 30px;
-            }
-        }
+      &:hover {
+        background-color: transparent;
+      }
     }
-    .pagination-button {
-        padding: 20px;
-        border: 1px solid rgba(#fff, .2);
-        border-radius: 10px;
-        margin-left: 20px;
-        cursor: pointer;
-        margin-bottom: 20px;
 
-        &[disabled] {
-            opacity: .2;
-            pointer-events: none;
-
-            &:hover {
-                background-color: transparent;
-            }
-        }
-
-        &:hover {
-            background: rgba(#fff, .2);
-        }
+    &:hover {
+      background: rgba(#fff, 0.2);
     }
+  }
 }
 
 @media (max-width: 700px) {
-    .movie-list {
-
-        .movies {
-            width: 300px;
-            flex-direction: column;
-        }
+  .movie-list {
+    .movies {
+      width: 300px;
+      flex-direction: column;
     }
+  }
 }

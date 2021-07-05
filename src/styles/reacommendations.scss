@@ -1,6 +1,16 @@
 .reacommendations-movies {
   height: 100px;
 
+  .not-found {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 90%;
+    height: 50px;
+    font-size: 14px;
+    margin: 5px;
+  }
+
   ul {
     display: flex;
     align-items: center;

@@ -7,7 +7,6 @@ const MoviePage = ({ match }) => {
   const [movie, setMovie] = useState({});
   const [similars, setSimilars] = useState([]);
   const [recommendations, setRecommendations] = useState([]);
-  const [active, setActive] = useState(false);
 
   useEffect(() => {
     // Get Details
@@ -38,16 +37,14 @@ const MoviePage = ({ match }) => {
     <>
       <div>
         <div className="movie-page">
-          <div className="moviea">
+          <div className="movie">
             <h1>{movie.title}</h1>
             <MovieInfo movie={movie} />
             <div className="bar"></div>
             <SimilarMovies similars={similars} />
           </div>
 
-          <Recommendations
-            recommendations={recommendations}
-          />
+          <Recommendations recommendations={recommendations} />
         </div>
       </div>
     </>

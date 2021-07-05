@@ -1,7 +1,6 @@
 import "../styles/reacommendations.scss";
 
 const Recommendations = ({ recommendations }) => {
-  console.log(window.innerHeight);
   return (
     <div className="reacommendations-movies">
       <ul>
@@ -11,6 +10,9 @@ const Recommendations = ({ recommendations }) => {
             <a href={`/filmler/film/${movie.id}`}>{movie.title}</a>
           </li>
         ))}
+        {recommendations.length === 0 && (
+          <div key="1" className="not-found">Burada bir şey bulamadık :(</div>
+        )}
       </ul>
     </div>
   );
