@@ -8,7 +8,7 @@ const Categories = () => {
   
   useEffect(() => {
     fetch(
-      `http://api.themoviedb.org/3/genre/movie/list?api_key=235b77fe4aedf709eb99a3ac9f078f57&language=tr-TR`
+      `https://api.themoviedb.org/3/genre/movie/list?api_key=235b77fe4aedf709eb99a3ac9f078f57&language=tr-TR`
     )
       .then((res) => res.json())
       .then((data) => setGenres(data.genres));
