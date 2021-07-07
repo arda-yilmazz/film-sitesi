@@ -1,24 +1,16 @@
-import "../styles/movielist.scss";
+/* eslint-disable react-hooks/exhaustive-deps */
+import "../styles/categorized-movie.scss";
 import { useState, useEffect } from "react";
+import { useParams } from "react-router";
 import Movie from "./Movie";
-import LoadingAnim from "./LoadingAnim";
 
-const MovieList = () => {
+const Categorized = () => {
   const [movies, setMovies] = useState();
   const [pageNumber, setPageNumber] = useState(2);
-
-  useEffect(() => {
-    fetch(
-      `https://api.themoviedb.org/3/movie/top_rated?api_key=235b77fe4aedf709eb99a3ac9f078f57&language=tr-TR&page=1`
-    )
-      .then((res) => res.json())
-      .then((data) => setMovies(data.results));
-
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
+  const router = useParams();
 
   const nextPageHandle = (e) => {
-    e.preventDefault()
+    e.preventDefault();
     fetch(
       `https://api.themoviedb.org/3/movie/top_rated?api_key=235b77fe4aedf709eb99a3ac9f078f57&language=tr-TR&page=${pageNumber}`
     )
@@ -26,11 +18,12 @@ const MovieList = () => {
       .then((data) => {
         setMovies(data.results);
         setPageNumber((prev) => prev + 1);
+        console.log(data);
       });
   };
 
   const prevPageHandle = (e) => {
-    e.preventDefault()
+    e.preventDefault();
     fetch(
       `https://api.themoviedb.org/3/movie/top_rated?api_key=235b77fe4aedf709eb99a3ac9f078f57&language=tr-TR&page=${pageNumber}`
     )
@@ -41,17 +34,21 @@ const MovieList = () => {
       });
   };
 
+  useEffect(() => {
+    fetch(
+      `https://api.themoviedb.org/3/discover/movie?api_key=235b77fe4aedf709eb99a3ac9f078f57&language=tr-TR&sort_by=popularity.desc&include_adult=false&include_video=false&page=1&with_genres=${router.genreId}&with_watch_monetization_types=flatrate`
+    )
+      .then((res) => res.json())
+      .then((data) => setMovies(data.results));
+  }, []);
   return (
     <>
-      <div className="movie-list">
-        <h1>Filmler</h1>
-
-        {!movies && <LoadingAnim />}
-
-        <div className="movies">
-          {movies &&
-            movies.map((movie) => <Movie key={movie.id} movie={movie} />)}
-          <button onClick={prevPageHandle} className="pagination-button"
+      <h1 className="categorized-title">İlgili Kategorideki filmler</h1>
+      <div className="categorized-movies">
+        {movies &&
+          movies.map((movie) => <Movie movie={movie} key={movie.id} />)}
+      </div>
+      <button onClick={prevPageHandle} className="pagination-button"
             disabled={pageNumber === 2 ? "disabled" : ""}
           >
             Önceki Sayfa
@@ -64,10 +61,8 @@ const MovieList = () => {
             Sonraki Sayfa
           </button>
           
-        </div>
-      </div>
     </>
   );
 };
 
-export default MovieList;
+export default Categorized;

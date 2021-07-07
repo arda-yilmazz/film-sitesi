@@ -14,6 +14,9 @@ const Nav = () => {
         <li>
           <Link to="/filmler">Filmler</Link>
         </li>
+        <li>
+          <Link to="/kategoriler">Kategoriler</Link>
+        </li>
       </ul>
     </nav>
   );

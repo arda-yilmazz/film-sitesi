@@ -5,6 +5,8 @@ import MoviePage from "./components/MoviePage";
 import Nav from "./components/Nav";
 import NotFound from "./components/404";
 import Home from "./components/Home";
+import Categories from './components/Categories';
+import Categorized from './components/Categorized';
 
 function App() {
   return (
@@ -16,6 +18,8 @@ function App() {
           <Route path="/hakkinda" component={About} />
           <Route exact path="/filmler" component={MovieList} />
           <Route path="/filmler/film/:id" component={MoviePage} />
+          <Route exact path="/kategoriler" component={Categories} />
+          <Route path="/kategoriler/kategori/:genreId" component={Categorized} />
           <Route component={NotFound} />
         </Switch>
       </Router>
