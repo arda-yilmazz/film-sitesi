@@ -14,8 +14,8 @@ const UpcomingMovies = () => {
     return (
         <>
             <div className="upcoming-movies-container">
-                <h3>Yakında Yayınlanması Beklenen Filmler</h3>
-                <Swiper className="movies" slidesPerView={10}>
+                <h3 className="head">Yakında Yayınlanması Beklenen Filmler</h3>
+                <Swiper className="movies" slidesPerView={window.innerWidth < 700 ? 3 : 10}>
                     {movies.map(movie => (
                         <SwiperSlide key={movie.id} className="movie-container">
                             <Movie movie={movie} />

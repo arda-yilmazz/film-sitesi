@@ -19,7 +19,7 @@ const PlayingMovies = () => {
     <>
       <div className="playing-movies-container">
         <h3>Şuan Gösterimde Olan Filmler</h3>
-        <Swiper className="movies" slidesPerView={10}>
+        <Swiper className="movies" slidesPerView={window.innerWidth < 700 ? 3 : 10}>
             {nowPlayingMovies.map((movie) => (
               <SwiperSlide key={movie.id}>
                   <Movie movie={movie} />

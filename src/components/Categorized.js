@@ -3,10 +3,11 @@ import "../styles/categorized-movie.scss";
 import { useState, useEffect } from "react";
 import { useParams } from "react-router";
 import Movie from "./Movie";
+import LoadingAnim from './LoadingAnim';
 
 const Categorized = () => {
   const [movies, setMovies] = useState();
-  const [pageNumber, setPageNumber] = useState(2);
+  const [pageNumber, setPageNumber] = useState(1);
   const router = useParams();
 
   const nextPageHandle = (e) => {
@@ -18,7 +19,6 @@ const Categorized = () => {
       .then((data) => {
         setMovies(data.results);
         setPageNumber((prev) => prev + 1);
-        console.log(data);
       });
   };
 
@@ -43,6 +43,11 @@ const Categorized = () => {
   }, []);
   return (
     <>
+
+      {!movies && <LoadingAnim />}
+
+      {movies && movies.length === 0 && <p>Gösterecek bir şey yok</p>}
+
       <h1 className="categorized-title">İlgili Kategorideki filmler</h1>
       <div className="categorized-movies">
         {movies &&

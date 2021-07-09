@@ -5,11 +5,11 @@ import UpcomingMovies from "./UpcomingMovies";
 
 const Home = () => {
   return (
-    <>
+    <div className="home-container">
       <PlayingMovies />
 
       <UpcomingMovies />
-    </>
+    </div>
   );
 };
 

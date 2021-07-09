@@ -54,3 +54,13 @@
     background: rgba(#fff, 0.2);
   }
 }
+
+@media (max-width: 700px) {
+  .categorized-movies {
+    width: 250px;
+
+    .title {
+      display: none;
+    }
+  } 
+}
