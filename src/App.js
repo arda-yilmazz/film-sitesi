@@ -17,11 +17,9 @@ function App() {
     <>
       <Router>
         <Nav />
-        {window.innerWidth < 700 && (
-          <div className="bar" onClick={() => setIsOpen(!isOpen)}>
+        <div className="bar" onClick={() => setIsOpen(!isOpen)}>
             <GrMenu />
-          </div>
-        )}
+        </div>
 
         {isOpen && <ResponsiveNav />}
         <Switch>

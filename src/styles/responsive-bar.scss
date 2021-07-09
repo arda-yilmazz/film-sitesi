@@ -35,7 +35,7 @@
 .bar {
     width: 59px;
     height: 59px;
-    display: flex;
+    display: none;
     align-items: center;
     justify-content: center;
     position: absolute;
@@ -50,5 +50,11 @@
         path {
             stroke: #fff;
         }
+    }
+}
+
+@media (max-width: 700px) {
+    .bar {
+        display: flex;
     }
 }

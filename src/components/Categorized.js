@@ -7,7 +7,7 @@ import LoadingAnim from './LoadingAnim';
 
 const Categorized = () => {
   const [movies, setMovies] = useState();
-  const [pageNumber, setPageNumber] = useState(1);
+  const [pageNumber, setPageNumber] = useState(2);
   const router = useParams();
 
   const nextPageHandle = (e) => {
