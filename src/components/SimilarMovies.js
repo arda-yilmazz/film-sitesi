@@ -9,7 +9,7 @@ const SimilarMovies = ({ similars }) => {
         Bu filme benzeyen filmlere bakmak ister misin?
       </h1>
       <div className="moviea">
-        <Swiper slidesPerView={4} className="similar-movies">
+        <Swiper slidesPerView={window.innerWidth < 700 ? 1 : 4} className="similar-movies">
           {similars.map((movie) => (
             <SwiperSlide key={movie.id} className="movie-container">
               <a

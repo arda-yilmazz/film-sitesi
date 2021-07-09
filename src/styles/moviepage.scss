@@ -99,11 +99,11 @@ div {
 
         &::before {
           content: "\2022";
-          color: #fff; 
-          font-weight: bold; 
+          color: #fff;
+          font-weight: bold;
           display: inline-block;
-          width: 1em; 
-          margin-left: -1em; 
+          width: 1em;
+          margin-left: -1em;
         }
       }
     }
@@ -166,6 +166,42 @@ div {
           }
         }
       }
+    }
+  }
+}
+
+@media (max-width: 700px) {
+  .movie-page {
+    margin: 0 auto;
+    width: 100px;
+
+    h1 {
+      margin: 60px 0;
+    }
+
+    .movie-info {
+      width: 100px !important;
+      margin: 0 auto !important;
+
+      .release-date {
+        width: 100%;
+      }
+      
+      .movie-detail {
+
+        .movie-image {
+          height: 300px !important;
+        }
+      }
+    }
+  }
+
+  .moviea {
+    .similar-movies {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 350px !important;
     }
   }
 }

@@ -13,7 +13,7 @@ const ResponsiveNav = () => {
                     <a href="/hakkinda">Hakkında</a>
                 </li>
                 <li>
-                    <a href="filmler">Filmler</a>
+                    <a href="/filmler">Filmler</a>
                 </li>
                 <li>
                     <a href="/kategoriler">Kategoriler</a>
