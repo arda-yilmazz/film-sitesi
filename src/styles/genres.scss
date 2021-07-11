@@ -16,6 +16,10 @@
         margin: 20px;
         border: 1px solid rgba(#fff, .1);
 
+        &:first-child {
+            margin-top: 80px;
+        }
+
         &:hover {
             background: rgba(#fff, .1);
         }
