@@ -1,5 +1,6 @@
 .navbar {
-  position: relative;
+  margin-bottom: 20px;
+
   ul {
     display: flex;
     align-items: center;
@@ -8,6 +9,14 @@
     border-bottom: 1px solid rgba(#fff, 0.1);
 
     li {
+      &:first-child {
+        margin-left: 270px;
+      }
+
+      &:nth-child(4) {
+        margin-right: 50px;
+      }
+
       a {
         display: flex;
         align-items: center;
@@ -21,14 +30,14 @@
           background: rgba(#fff, 0.1);
 
           &::before {
-            content: '';
+            content: "";
             display: block;
             position: absolute;
             height: 1px;
-            bottom: 0;            
+            bottom: 0;
             left: 0;
             right: 0;
-            background: rgba(#fff, 0.5)
+            background: rgba(#fff, 0.5);
           }
         }
       }
@@ -36,9 +45,16 @@
   }
 }
 
-
 @media (max-width: 700px) {
   .navbar {
-    display: none;
+    width: 200px;
+    ul {
+      li {
+        display: none;
+        &:last-child {
+          display: block;
+        }
+      }
+    }
   }
 }

@@ -10,8 +10,6 @@ import Categories from "./components/Categories";
 import Categorized from "./components/Categorized";
 import ResponsiveNav from "./components/ResponsiveNav";
 import { GrMenu } from 'react-icons/gr';
-import Search from './components/Search';
-import SearchResults from './components/SearchResults';
 
 function App() {
   const [isOpen, setIsOpen] = useState(false);
@@ -21,15 +19,14 @@ function App() {
     <>
       <Router>
 
-        <Nav />
+        <Nav search={search} setSearch={setSearch} />
         
         <div className="bar" onClick={() => setIsOpen(!isOpen)}>
             <GrMenu />
         </div>
-        
-        <Search search={search} setSearch={setSearch} />
 
         {isOpen && <ResponsiveNav />}
+        
         <Switch>
           <Route exact path="/" component={Home} />
           <Route path="/hakkinda" component={About} />
@@ -40,7 +37,6 @@ function App() {
             path="/kategoriler/kategori/:genreId"
             component={Categorized}
           />
-          <Route path="/search/:value" component={() => <SearchResults search={search} />} />
           <Route component={NotFound} />
         </Switch>
       </Router>

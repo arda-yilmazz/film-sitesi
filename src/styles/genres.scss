@@ -16,10 +16,6 @@
         margin: 20px;
         border: 1px solid rgba(#fff, .1);
 
-        &:first-child {
-            margin-top: 80px;
-        }
-
         &:hover {
             background: rgba(#fff, .1);
         }
@@ -42,5 +38,9 @@
 @media (max-width: 700px) {
     .genres-container {
         width: 250px;
+
+        &:first-child {
+            margin-top: 80px;
+        }
     }
 }

@@ -20,7 +20,7 @@ const MovieList = () => {
   const nextPageHandle = (e) => {
     e.preventDefault()
     fetch(
-      `https://api.themoviedb.org/3/movie/top_rated?api_key=235b77fe4aedf709eb99a3ac9f078f57&language=tr-TR&page=${pageNumber}`
+      `${process.env.REACT_APP_ENDPOINT}top_rated?&language=tr-TR&page=${pageNumber}`
     )
       .then((res) => res.json())
       .then((data) => {
@@ -32,7 +32,7 @@ const MovieList = () => {
   const prevPageHandle = (e) => {
     e.preventDefault()
     fetch(
-      `https://api.themoviedb.org/3/movie/top_rated?api_key=235b77fe4aedf709eb99a3ac9f078f57&language=tr-TR&page=${pageNumber}`
+      `${process.env.REACT_APP_ENDPOINT}top_rated?api_key=${process.env.REACT_APP_API_KEY}&${process.env.REACT_APP_LANGUAGE}&page=${pageNumber}`
     )
       .then((res) => res.json())
       .then((data) => {

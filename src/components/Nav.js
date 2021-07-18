@@ -1,7 +1,8 @@
 import '../styles/navbar.scss'
+import Search from './Search'
 import { Link } from "react-router-dom";
 
-const Nav = () => {
+const Nav = ({search, setSearch}) => {
   return (
     <nav className="navbar">
       <ul>
@@ -16,6 +17,9 @@ const Nav = () => {
         </li>
         <li>
           <Link to="/kategoriler">Kategoriler</Link>
+        </li>
+        <li>
+          <Search search={search} setSearch={setSearch} />
         </li>
       </ul>
     </nav>

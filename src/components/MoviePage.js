@@ -27,7 +27,7 @@ const MoviePage = () => {
 
     //Get Recommendations
     fetch(
-      `https://api.themoviedb.org/3/movie/${router.id}/recommendations?api_key=235b77fe4aedf709eb99a3ac9f078f57&language=tr-TRS&page=1`
+      `https://api.themoviedb.org/3/movie/${router.id}/recommendations?api_key=235b77fe4aedf709eb99a3ac9f078f57&language=tr-TR&page=1`
     )
       .then((res) => res.json())
       .then((data) => setRecommendations(data.results));
